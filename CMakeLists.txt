@@ -20,11 +20,11 @@ FetchContent_Declare(
     GIT_SHALLOW TRUE
 )
 
-# GLAD2 OpenGL loader
-FetchContent_Declare(glad GIT_REPOSITORY https://github.com/Dav1dde/glad.git GIT_TAG v2.0.8 SOURCE_SUBDIR cmake)
+# GLAD2 OpenGL loader (pre-generated, no Python/jinja2 needed)
+add_library(glad_gl_core_41 STATIC vendor/glad/src/gl.c)
+target_include_directories(glad_gl_core_41 PUBLIC vendor/glad/include)
 
-FetchContent_MakeAvailable(glfw glad)
-glad_add_library(glad_gl_core_41 STATIC API gl:core=4.1)
+FetchContent_MakeAvailable(glfw)
 find_package(OpenGL REQUIRED)
 
 add_executable(${PROJECT_NAME}

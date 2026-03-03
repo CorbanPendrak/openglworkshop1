@@ -2,40 +2,29 @@
 
 - CMake 3.15 or higher
 - C++17 compatible compiler
-- Python 3 with `jinja2`
 - Git
 - Internet connection to fetch dependencies
-
-After installing Python, install the required package:
-
-```bash
-pip install jinja2
-```
-
-> [!NOTE]
-> If `pip` doesn't work, try `pip3 install jinja2` instead.
 
 ### Windows
 
 1. Install [Visual Studio](https://visualstudio.microsoft.com/) with the **"Desktop development with C++"** workload (includes MSVC and CMake), or install CMake and a C++17 compiler separately
 2. Install [Git](https://git-scm.com/download/win)
-3. Install [Python 3](https://www.python.org/downloads/). Make sure to check **"Add python.exe to PATH"** during installation
-4. Search for **Developer Command Prompt** or **Developer PowerShell** in the Windows Start Menu to run CMake from the command line
+3. Search for **Developer Command Prompt** or **Developer PowerShell** in the Windows Start Menu to run CMake from the command line
 
 ### macOS
 
 ```bash
 xcode-select --install
-brew install cmake python3
+brew install cmake
 ```
 
-Xcode Command Line Tools provides Clang and Git. CMake can also be installed from [cmake.org](https://cmake.org/download/). Python 3 is included with macOS but can be updated via Homebrew.
+Xcode Command Line Tools provides Clang and Git. CMake can also be installed from [cmake.org](https://cmake.org/download/).
 
 ### Linux (Ubuntu/Debian)
 
 ```bash
 sudo apt update
-sudo apt install build-essential cmake git python3 python3-pip libgl1-mesa-dev libx11-dev \
+sudo apt install build-essential cmake git libgl1-mesa-dev libx11-dev \
     libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libxext-dev \
     libwayland-dev libxkbcommon-dev
 ```
@@ -43,7 +32,7 @@ sudo apt install build-essential cmake git python3 python3-pip libgl1-mesa-dev l
 ### Linux (Fedora)
 
 ```bash
-sudo dnf install gcc-c++ cmake git python3 mesa-libGL-devel libX11-devel \
+sudo dnf install gcc-c++ cmake git mesa-libGL-devel libX11-devel \
     libXrandr-devel libXinerama-devel libXcursor-devel libXi-devel \
     libXext-devel wayland-devel libxkbcommon-devel
 ```
@@ -51,7 +40,7 @@ sudo dnf install gcc-c++ cmake git python3 mesa-libGL-devel libX11-devel \
 ### Linux (Arch)
 
 ```bash
-sudo pacman -S base-devel cmake git python mesa libx11 libxrandr libxinerama \
+sudo pacman -S base-devel cmake git mesa libx11 libxrandr libxinerama \
     libxcursor libxi wayland libxkbcommon
 ```
 
