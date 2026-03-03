@@ -86,4 +86,4 @@ build\bin\Debug\openglworkshop1.exe
 - GLM (header-only, included in `vendor` directory)
 - stb_image (header-only, included in `vendor` directory)
 
-GLFW and GLAD are fetched from the internet via CMake FetchContent.
+GLFW is fetched from the internet via CMake FetchContent. GLAD is pre-generated and included in the `vendor` directory.
